@@ -85,8 +85,8 @@ const faqs = [
 
 export default function ProgramsPage() {
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900">
-      <section className="relative overflow-hidden border-b border-slate-200 bg-white">
+    <div className="min-h-screen text-slate-900">
+      <section className="relative overflow-hidden border-b border-slate-200/70 bg-white/60 backdrop-blur-sm">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(14,165,233,0.12),transparent_32%),radial-gradient(circle_at_bottom_left,rgba(59,130,246,0.08),transparent_30%)]" />
         <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-24">
           <div className="max-w-3xl">
@@ -108,7 +108,7 @@ export default function ProgramsPage() {
             <div className="mt-8 flex flex-wrap gap-3">
               <a
                 href="#programs"
-                className="inline-flex items-center gap-2 rounded-xl bg-slate-950 px-5 py-3 font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-slate-800"
+                className="inline-flex items-center gap-2 rounded-xl bg-slate-950 px-5 py-3 font-semibold text-white shadow-lg shadow-slate-900/10 transition hover:-translate-y-0.5 hover:bg-slate-800"
               >
                 Explore programs
                 <ArrowUpRight className="h-4 w-4" />
@@ -117,7 +117,7 @@ export default function ProgramsPage() {
                 href="https://forms.gle/FGoyrEHC1CuP9hPSA"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 rounded-xl border border-slate-300 bg-white px-5 py-3 font-semibold text-slate-800 transition hover:-translate-y-0.5 hover:border-sky-300 hover:text-sky-700"
+                className="inline-flex items-center gap-2 rounded-xl border border-slate-300/80 bg-white/80 px-5 py-3 font-semibold text-slate-800 shadow-sm backdrop-blur transition hover:-translate-y-0.5 hover:border-sky-300 hover:text-sky-700"
               >
                 Join WikiClub Tech
               </Link>
@@ -146,7 +146,7 @@ export default function ProgramsPage() {
               <article
                 key={program.id}
                 id={program.id}
-                className="group rounded-3xl border border-slate-200 bg-white p-7 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl sm:p-9"
+                className="group rounded-3xl border border-white/80 bg-white/85 p-7 shadow-lg shadow-slate-900/5 backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:border-sky-200 hover:shadow-xl hover:shadow-sky-900/10 sm:p-9"
               >
                 <div className={`flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br ${program.accent} text-white shadow-lg`}>
                   <Icon className="h-7 w-7" />
@@ -217,7 +217,7 @@ export default function ProgramsPage() {
           <p className="text-sm font-bold uppercase tracking-[0.18em] text-sky-600">FAQ</p>
           <h2 className="mt-2 text-3xl font-bold text-slate-950">Questions, answered</h2>
         </div>
-        <div className="mt-10 divide-y divide-slate-200 rounded-2xl border border-slate-200 bg-white px-6">
+        <div className="mt-10 divide-y divide-slate-200 rounded-2xl border border-white/80 bg-white/80 px-6 shadow-lg shadow-slate-900/5 backdrop-blur-sm">
           {faqs.map((faq) => (
             <details key={faq.q} className="group py-5">
               <summary className="cursor-pointer list-none pr-8 font-semibold text-slate-900 marker:hidden">
@@ -230,7 +230,7 @@ export default function ProgramsPage() {
       </section>
 
       <section className="px-4 pb-16 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-7xl overflow-hidden rounded-3xl bg-gradient-to-r from-blue-600 to-cyan-500 p-8 text-white shadow-xl sm:p-12">
+        <div className="mx-auto max-w-7xl overflow-hidden rounded-3xl bg-gradient-to-r from-blue-600 via-blue-600 to-cyan-500 p-8 text-white shadow-xl shadow-blue-900/15 sm:p-12">
           <div className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
             <div className="max-w-2xl">
               <BookOpen className="h-8 w-8" />
