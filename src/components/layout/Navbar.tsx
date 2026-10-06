@@ -24,11 +24,11 @@ const Navbar = () => {
 
   const programLinks = [
     {
-      href: 'https://meta.wikimedia.org/wiki/Chai_with_Wiki',
+      href: '/programs#chai-with-wiki',
       label: 'chai with wiki',
     },
     {
-      href: 'https://meta.wikimedia.org/wiki/Road_to_wiki_program_UU',
+      href: '/programs#road-to-wiki',
       label: 'Road to wiki',
     },
   ];
