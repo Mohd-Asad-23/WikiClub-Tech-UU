@@ -41,3 +41,5 @@ jobs:
         uses: actions/deploy-pages@v4
 
 # Static GitHub Pages deployment
+
+# static export fix
