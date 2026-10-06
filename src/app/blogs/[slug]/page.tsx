@@ -16,6 +16,14 @@ interface BlogPostPageProps {
   }>;
 }
 
+export async function generateStaticParams() {
+  const blogsDirectory = path.join(process.cwd(), 'src/data/blogs');
+  return fs
+    .readdirSync(blogsDirectory)
+    .filter((file) => file.endsWith('.md'))
+    .map((file) => ({ slug: file.replace(/\\.md$/, '') }));
+}
+
 const BlogPostPage = async ({ params }: BlogPostPageProps) => {
   const { slug } = await params;
 
