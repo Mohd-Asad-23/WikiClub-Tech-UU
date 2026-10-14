@@ -8,6 +8,7 @@ import {
   GraduationCap,
   HeartHandshake,
   MessageCircle,
+  Mail,
   Sparkles,
   Users,
 } from 'lucide-react';
@@ -121,6 +122,13 @@ export default function ProgramsPage() {
               >
                 Join WikiClub Tech
               </Link>
+              <a
+                href="mailto:wikitech@indicwiki.org"
+                className="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white/80 px-5 py-3 font-semibold text-slate-700 transition hover:border-sky-300 hover:text-sky-700"
+              >
+                <Mail className="h-4 w-4" />
+                Email us
+              </a>
             </div>
           </div>
         </div>
@@ -168,15 +176,28 @@ export default function ProgramsPage() {
                     </li>
                   ))}
                 </ul>
-                <a
-                  href={program.href}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="mt-8 inline-flex items-center gap-2 font-semibold text-blue-600 transition hover:text-blue-800"
-                >
-                  View program details
-                  <ExternalLink className="h-4 w-4" />
-                </a>
+                <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
+                  <a
+                    href={program.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 font-semibold text-blue-600 transition hover:text-blue-800"
+                    aria-label={`View more details about ${program.title}`}
+                  >
+                    View More Details
+                    <ArrowUpRight className="h-4 w-4" />
+                  </a>
+                  <a
+                    href={program.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-sm font-medium text-slate-500 transition hover:text-sky-700"
+                    aria-label={`View ${program.title} on Meta-Wiki`}
+                  >
+                    View Meta-Wiki page
+                    <ExternalLink className="h-4 w-4" />
+                  </a>
+                </div>
               </article>
             );
           })}
