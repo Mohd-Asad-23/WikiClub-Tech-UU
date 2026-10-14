@@ -22,7 +22,7 @@ const Gallery = () => {
   }, []);
 
   return (
-    <section className='bg-gray-50 py-20'>
+    <section id='gallery' className='bg-gray-50 py-20'>
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         <h2 className='text-3xl md:text-4xl font-extrabold text-center text-gray-900 mb-12'>
           Gallery
