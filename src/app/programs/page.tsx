@@ -196,25 +196,25 @@ export default function ProgramsPage() {
               <article
                 key={program.id}
                 id={program.id}
-                className={`group relative isolate overflow-hidden rounded-3xl border border-white/80 bg-gradient-to-br ${isChai ? 'from-amber-500 to-orange-600' : 'from-emerald-700 to-teal-800'} p-6 text-white shadow-xl shadow-slate-900/10 transition duration-300 hover:-translate-y-1 hover:shadow-2xl sm:p-7`}
+                className={`group relative isolate overflow-hidden rounded-3xl border p-6 shadow-lg shadow-slate-900/[0.06] transition duration-300 hover:-translate-y-1 hover:shadow-xl sm:p-7 ${isChai ? 'border-orange-200/80 bg-gradient-to-br from-[#FFF3E7] via-[#FCE8D5] to-[#F8E2D2] text-[#713F25]' : 'border-emerald-200/80 bg-gradient-to-br from-[#EDF9F2] via-[#DDF2E7] to-[#D5EDE2] text-[#214F42]'}`}
               >
-                <div aria-hidden="true" className="absolute -right-10 -top-10 h-36 w-36 rounded-full border border-white/15" />
-                <div aria-hidden="true" className="absolute -right-4 -top-4 h-24 w-24 rounded-full border border-white/15" />
+                <div aria-hidden="true" className={`absolute -right-10 -top-10 h-36 w-36 rounded-full border ${isChai ? 'border-orange-900/[0.08]' : 'border-emerald-900/[0.08]'}`} />
+                <div aria-hidden="true" className={`absolute -right-4 -top-4 h-24 w-24 rounded-full border ${isChai ? 'border-orange-900/[0.08]' : 'border-emerald-900/[0.08]'}`} />
                 <div className="relative flex items-start justify-between gap-4">
-                  <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-white/20 ring-1 ring-white/20">
+                  <div className={`flex h-11 w-11 items-center justify-center rounded-xl ring-1 ${isChai ? 'bg-orange-200/70 text-[#8C4A20] ring-orange-300/70' : 'bg-emerald-200/70 text-[#27664F] ring-emerald-300/70'}`}>
                     <Icon className="h-5 w-5" />
                   </div>
-                  <span className="rounded-full border border-white/25 bg-white/10 px-3 py-1 text-xs font-semibold tracking-wide text-white/90">
+                  <span className={`rounded-full border px-3 py-1 text-xs font-bold tracking-wide ${isChai ? 'border-orange-300/80 bg-white/50 text-[#8C4A20]' : 'border-emerald-300/80 bg-white/50 text-[#27664F]'}`}>
                     {isChai ? 'CONNECT & DISCOVER' : 'BUILD & CONTRIBUTE'}
                   </span>
                 </div>
                 <h3 className="relative mt-5 text-2xl font-bold tracking-tight sm:text-3xl">{program.title}</h3>
-                <p className="relative mt-3 max-w-xl text-sm leading-6 text-white/90 sm:text-base">{program.description}</p>
-                <div className="relative mt-6 flex flex-wrap items-center gap-4 border-t border-white/20 pt-4">
-                  <a href={program.href} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-xl bg-white px-4 py-2.5 text-sm font-bold text-slate-900 transition hover:-translate-y-0.5 hover:bg-white/90" aria-label={`View more details about ${program.title}`}>
+                <p className={`relative mt-3 max-w-xl text-sm leading-6 sm:text-base ${isChai ? 'text-[#754F3A]' : 'text-[#3D6657]'}`}>{program.description}</p>
+                <div className={`relative mt-6 flex flex-wrap items-center gap-4 border-t pt-4 ${isChai ? 'border-orange-300/70' : 'border-emerald-300/70'}`}>
+                  <a href={program.href} target="_blank" rel="noopener noreferrer" className={`inline-flex items-center gap-2 rounded-xl px-4 py-2.5 text-sm font-bold text-white shadow-sm transition hover:-translate-y-0.5 ${isChai ? 'bg-[#B96B35] hover:bg-[#9F5728]' : 'bg-[#34765D] hover:bg-[#285F4A]'}`} aria-label={`View more details about ${program.title}`}>
                     View program details <ArrowUpRight className="h-4 w-4" />
                   </a>
-                  <a href={program.href} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-sm font-semibold text-white/90 transition hover:text-white" aria-label={`View ${program.title} on Meta-Wiki`}>
+                  <a href={program.href} target="_blank" rel="noopener noreferrer" className={`inline-flex items-center gap-1.5 text-sm font-bold transition ${isChai ? 'text-[#8C4A20] hover:text-[#5E3219]' : 'text-[#27664F] hover:text-[#174735]'}`} aria-label={`View ${program.title} on Meta-Wiki`}>
                     Meta-Wiki <ExternalLink className="h-3.5 w-3.5" />
                   </a>
                 </div>
