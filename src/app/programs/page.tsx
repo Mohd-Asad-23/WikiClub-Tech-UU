@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { contributors } from '@/data/contributors/contributors';
 import {
   ArrowUpRight,
   BookOpen,
@@ -8,12 +9,16 @@ import {
   ExternalLink,
   GraduationCap,
   HeartHandshake,
+  Image as ImageIcon,
   MessageCircle,
   Mail,
   Sparkles,
   Trophy,
   Users,
 } from 'lucide-react';
+
+const contributorCount = contributors.length;
+const mergedContributionCount = contributors.reduce((total, contributor) => total + contributor.merged, 0);
 
 const programs = [
   {
@@ -301,6 +306,41 @@ export default function ProgramsPage() {
                 </li>
               ))}
             </ol>
+          </div>
+        </div>
+      </section>
+
+      <section id="community-impact" className="relative z-10 mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
+        <div className="overflow-hidden rounded-3xl border border-slate-200/80 bg-white/75 p-6 shadow-sm backdrop-blur-sm sm:p-8">
+          <div className="grid gap-8 md:grid-cols-[1fr_auto] md:items-center">
+            <div className="max-w-2xl">
+              <p className="text-sm font-bold uppercase tracking-[0.18em] text-emerald-700">Community impact</p>
+              <h2 className="mt-2 text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">Small contributions. Shared progress.</h2>
+              <p className="mt-3 leading-7 text-slate-600">
+                Explore the current contributor leaderboard and discover the people and activities behind our open-source community. These figures reflect the contributor data currently listed on this website.
+              </p>
+            </div>
+            <div className="grid grid-cols-2 gap-3 md:min-w-[300px]">
+              <div className="rounded-2xl border border-sky-200 bg-sky-50/80 p-5">
+                <p className="text-3xl font-extrabold text-sky-800">{contributorCount}</p>
+                <p className="mt-1 text-sm font-medium text-slate-600">Listed contributors</p>
+              </div>
+              <div className="rounded-2xl border border-emerald-200 bg-emerald-50/80 p-5">
+                <p className="text-3xl font-extrabold text-emerald-800">{mergedContributionCount}</p>
+                <p className="mt-1 text-sm font-medium text-slate-600">Merged contributions listed</p>
+              </div>
+            </div>
+          </div>
+          <div className="mt-6 flex flex-wrap gap-3 border-t border-slate-200 pt-5">
+            <Link href="/contributors" className="inline-flex items-center gap-2 rounded-xl bg-emerald-700 px-4 py-2.5 text-sm font-bold text-white transition hover:bg-emerald-800">
+              Explore leaderboard <ArrowUpRight className="h-4 w-4" />
+            </Link>
+            <Link href="/#gallery" className="inline-flex items-center gap-2 rounded-xl border border-slate-300 bg-white px-4 py-2.5 text-sm font-bold text-slate-700 transition hover:border-sky-300 hover:text-sky-800">
+              <ImageIcon className="h-4 w-4" /> Community gallery
+            </Link>
+            <Link href="/teams" className="inline-flex items-center gap-2 rounded-xl border border-slate-300 bg-white px-4 py-2.5 text-sm font-bold text-slate-700 transition hover:border-emerald-300 hover:text-emerald-800">
+              Meet the team <Users className="h-4 w-4" />
+            </Link>
           </div>
         </div>
       </section>
