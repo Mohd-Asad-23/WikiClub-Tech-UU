@@ -87,9 +87,12 @@ const faqs = [
 export default function ProgramsPage() {
   return (
     <div className="min-h-screen text-slate-900">
-      <section className="relative overflow-hidden border-b border-slate-200/70 bg-white/60 backdrop-blur-sm">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(14,165,233,0.12),transparent_32%),radial-gradient(circle_at_bottom_left,rgba(59,130,246,0.08),transparent_30%)]" />
-        <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-24">
+      <section className="relative isolate overflow-hidden border-b border-slate-200/70 bg-gradient-to-br from-white via-sky-50/70 to-emerald-50/60 backdrop-blur-sm">
+        <div aria-hidden="true" className="absolute inset-0 bg-[radial-gradient(circle_at_80%_15%,rgba(14,165,233,0.16),transparent_28%),radial-gradient(circle_at_10%_90%,rgba(16,185,129,0.12),transparent_30%)]" />
+        <div aria-hidden="true" className="absolute -right-24 top-16 h-72 w-72 rounded-full border border-sky-200/50" />
+        <div aria-hidden="true" className="absolute -right-12 top-28 h-48 w-48 rounded-full border border-emerald-200/60" />
+        <div className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
+          <div className="grid gap-12 lg:grid-cols-[1.08fr_0.92fr] lg:items-center">
           <div className="max-w-3xl">
             <span className="inline-flex items-center gap-2 rounded-full border border-sky-200 bg-sky-50 px-4 py-2 text-sm font-semibold text-sky-700">
               <Sparkles className="h-4 w-4" />
@@ -131,6 +134,57 @@ export default function ProgramsPage() {
               </a>
             </div>
           </div>
+
+          <div className="relative mx-auto w-full max-w-xl lg:justify-self-end">
+            <div aria-hidden="true" className="absolute -inset-5 rounded-[2.5rem] bg-gradient-to-br from-sky-200/60 via-white/30 to-emerald-200/60 blur-2xl" />
+            <div className="relative overflow-hidden rounded-[2rem] border border-white/90 bg-white/75 p-5 shadow-2xl shadow-sky-900/10 backdrop-blur-xl sm:p-7">
+              <div aria-hidden="true" className="absolute -right-12 -top-12 h-40 w-40 rounded-full bg-sky-100/80" />
+              <div className="relative flex items-center justify-between gap-3">
+                <div>
+                  <p className="text-xs font-bold uppercase tracking-[0.2em] text-sky-700">Open knowledge in action</p>
+                  <p className="mt-1 text-lg font-bold text-slate-950">Your journey starts here</p>
+                </div>
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-slate-950 text-white shadow-lg">
+                  <Sparkles className="h-5 w-5" />
+                </div>
+              </div>
+
+              <div className="relative mt-6 grid gap-3 sm:grid-cols-2">
+                <div className="rounded-2xl bg-gradient-to-br from-cyan-500 to-sky-600 p-5 text-white shadow-lg shadow-sky-900/10">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/20">
+                    <MessageCircle className="h-5 w-5" />
+                  </div>
+                  <p className="mt-5 text-xs font-semibold uppercase tracking-wider text-cyan-50">Connect & discover</p>
+                  <p className="mt-1 text-xl font-bold">Chai with Wiki</p>
+                  <p className="mt-2 text-sm leading-5 text-sky-50">Start with a conversation. Grow with a community.</p>
+                </div>
+                <div className="rounded-2xl bg-gradient-to-br from-blue-700 to-indigo-700 p-5 text-white shadow-lg shadow-indigo-900/10 sm:translate-y-5">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/15">
+                    <Code2 className="h-5 w-5" />
+                  </div>
+                  <p className="mt-5 text-xs font-semibold uppercase tracking-wider text-blue-100">Build & contribute</p>
+                  <p className="mt-1 text-xl font-bold">Road to Wiki</p>
+                  <p className="mt-2 text-sm leading-5 text-blue-100">Learn the workflow. Make your work count.</p>
+                </div>
+              </div>
+
+              <div className="relative mt-8 flex items-center gap-3 rounded-2xl border border-slate-200/80 bg-white/80 p-4">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-emerald-50 text-emerald-700">
+                  <HeartHandshake className="h-5 w-5" />
+                </div>
+                <div>
+                  <p className="font-semibold text-slate-900">Learn together, contribute together</p>
+                  <p className="mt-1 text-sm text-slate-600">A welcoming path from curiosity to open-source participation.</p>
+                </div>
+              </div>
+              <div aria-hidden="true" className="absolute bottom-3 right-5 flex gap-1.5">
+                <span className="h-1.5 w-1.5 rounded-full bg-sky-400" />
+                <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
+                <span className="h-1.5 w-1.5 rounded-full bg-indigo-400" />
+              </div>
+            </div>
+          </div>
+          </div>
         </div>
       </section>
 
@@ -154,9 +208,10 @@ export default function ProgramsPage() {
               <article
                 key={program.id}
                 id={program.id}
-                className="group rounded-3xl border border-white/80 bg-white/85 p-7 shadow-lg shadow-slate-900/5 backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:border-sky-200 hover:shadow-xl hover:shadow-sky-900/10 sm:p-9"
+                className="group relative overflow-hidden rounded-3xl border border-slate-200/70 bg-white/90 p-7 shadow-lg shadow-slate-900/5 backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:border-sky-200 hover:shadow-2xl hover:shadow-sky-900/10 sm:p-9"
               >
-                <div className={`flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br ${program.accent} text-white shadow-lg`}>
+                <div aria-hidden="true" className={`absolute right-0 top-0 h-32 w-32 rounded-bl-[5rem] bg-gradient-to-br ${program.accent} opacity-[0.08] transition duration-300 group-hover:scale-110`} />
+                <div className={`relative flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br ${program.accent} text-white shadow-lg shadow-slate-900/10 transition duration-300 group-hover:rotate-3 group-hover:scale-105`}>
                   <Icon className="h-7 w-7" />
                 </div>
                 <p className="mt-7 text-sm font-bold uppercase tracking-wider text-sky-600">
@@ -204,8 +259,10 @@ export default function ProgramsPage() {
         </div>
       </section>
 
-      <section className="bg-slate-950 py-16 text-white">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section className="relative isolate overflow-hidden bg-slate-950 py-16 text-white">
+        <div aria-hidden="true" className="absolute -left-24 top-0 h-72 w-72 rounded-full bg-cyan-500/10 blur-3xl" />
+        <div aria-hidden="true" className="absolute -right-24 bottom-0 h-72 w-72 rounded-full bg-blue-500/10 blur-3xl" />
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
             <div>
               <p className="text-sm font-bold uppercase tracking-[0.18em] text-cyan-300">
@@ -238,10 +295,10 @@ export default function ProgramsPage() {
           <p className="text-sm font-bold uppercase tracking-[0.18em] text-sky-600">FAQ</p>
           <h2 className="mt-2 text-3xl font-bold text-slate-950">Questions, answered</h2>
         </div>
-        <div className="mt-10 divide-y divide-slate-200 rounded-2xl border border-white/80 bg-white/80 px-6 shadow-lg shadow-slate-900/5 backdrop-blur-sm">
+        <div className="mt-10 divide-y divide-slate-200 rounded-2xl border border-slate-200/70 bg-white/90 px-6 shadow-xl shadow-slate-900/5 backdrop-blur-sm">
           {faqs.map((faq) => (
-            <details key={faq.q} className="group py-5">
-              <summary className="cursor-pointer list-none pr-8 font-semibold text-slate-900 marker:hidden">
+            <details key={faq.q} className="group py-5 marker:hidden">
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-4 pr-1 font-semibold text-slate-900 marker:hidden transition hover:text-sky-700">
                 {faq.q}
               </summary>
               <p className="mt-3 max-w-3xl text-sm leading-6 text-slate-600">{faq.a}</p>
@@ -255,7 +312,7 @@ export default function ProgramsPage() {
           <div className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
             <div className="max-w-2xl">
               <BookOpen className="h-8 w-8" />
-              <h2 className="mt-4 text-3xl font-bold">Ready to start contributing?</h2>
+              <h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">Ready to start contributing?</h2>
               <p className="mt-3 text-blue-50">
                 Join the WikiClub Tech UU community and turn curiosity into practical open-source experience.
               </p>
