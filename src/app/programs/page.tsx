@@ -2,6 +2,7 @@ import Link from 'next/link';
 import {
   ArrowUpRight,
   BookOpen,
+  CalendarDays,
   CheckCircle2,
   Code2,
   ExternalLink,
@@ -10,6 +11,7 @@ import {
   MessageCircle,
   Mail,
   Sparkles,
+  Trophy,
   Users,
 } from 'lucide-react';
 
@@ -221,6 +223,85 @@ export default function ProgramsPage() {
               </article>
             );
           })}
+        </div>
+      </section>
+
+      <section id="program-resources" className="relative z-10 mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+        <div className="mb-10 max-w-3xl">
+          <p className="text-sm font-bold uppercase tracking-[0.18em] text-sky-700">
+            Your next step
+          </p>
+          <h2 className="mt-2 text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">
+            Keep learning beyond the program
+          </h2>
+          <p className="mt-3 leading-7 text-slate-600">
+            Find community updates, learn from contributors, meet the team and take your next step into open source.
+          </p>
+        </div>
+
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <article className="rounded-2xl border border-sky-200/80 bg-sky-50/70 p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-md">
+            <CalendarDays className="h-7 w-7 text-sky-700" />
+            <h3 className="mt-4 text-lg font-bold text-slate-900">Events & community updates</h3>
+            <p className="mt-2 text-sm leading-6 text-slate-600">
+              Keep up with community stories and announcements. Check the latest posts and official program pages for current updates.
+            </p>
+            <div className="mt-5 flex flex-wrap gap-4">
+              <Link href="/blogs" className="inline-flex items-center gap-1.5 text-sm font-bold text-sky-800 hover:text-sky-950">
+                Read community posts <ArrowUpRight className="h-4 w-4" />
+              </Link>
+              <a href="https://meta.wikimedia.org/wiki/WikiClub_Tech_UU/en" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-sm font-bold text-sky-800 hover:text-sky-950">
+                Official Meta-Wiki <ExternalLink className="h-3.5 w-3.5" />
+              </a>
+            </div>
+          </article>
+
+          <article className="rounded-2xl border border-emerald-200/80 bg-emerald-50/70 p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-md">
+            <Trophy className="h-7 w-7 text-emerald-700" />
+            <h3 className="mt-4 text-lg font-bold text-slate-900">Contributor showcase</h3>
+            <p className="mt-2 text-sm leading-6 text-slate-600">
+              Explore the existing contribution leaderboard and celebrate the people helping the community grow.
+            </p>
+            <Link href="/contributors" className="mt-5 inline-flex items-center gap-1.5 text-sm font-bold text-emerald-800 hover:text-emerald-950">
+              Meet contributors <ArrowUpRight className="h-4 w-4" />
+            </Link>
+          </article>
+
+          <article className="rounded-2xl border border-sky-200/80 bg-sky-50/70 p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-md">
+            <Users className="h-7 w-7 text-sky-700" />
+            <h3 className="mt-4 text-lg font-bold text-slate-900">Mentors & team</h3>
+            <p className="mt-2 text-sm leading-6 text-slate-600">
+              Find the people behind WikiClub Tech UU and explore the existing team directory to learn about community roles.
+            </p>
+            <Link href="/teams" className="mt-5 inline-flex items-center gap-1.5 text-sm font-bold text-sky-800 hover:text-sky-950">
+              Explore the team <ArrowUpRight className="h-4 w-4" />
+            </Link>
+          </article>
+        </div>
+
+        <div className="mt-6 rounded-3xl border border-emerald-200/80 bg-gradient-to-r from-emerald-50/90 via-white/90 to-sky-50/90 p-6 sm:p-8">
+          <div className="grid gap-6 md:grid-cols-[0.8fr_1.2fr] md:items-center">
+            <div>
+              <p className="text-sm font-bold uppercase tracking-[0.16em] text-emerald-800">First contribution guide</p>
+              <h3 className="mt-2 text-2xl font-bold tracking-tight text-slate-950">A simple path to get started</h3>
+              <p className="mt-3 text-sm leading-6 text-slate-600">
+                You do not need to know everything on day one. Start small, ask questions and build confidence step by step.
+              </p>
+            </div>
+            <ol className="grid gap-3 sm:grid-cols-2">
+              {[
+                { title: '01 · Explore', text: 'Choose a Wikimedia or open-source project that interests you.' },
+                { title: '02 · Set up', text: 'Get familiar with Git, GitHub and the project contribution guide.' },
+                { title: '03 · Ask & contribute', text: 'Connect with the community and start with a beginner-friendly task.' },
+                { title: '04 · Learn & improve', text: 'Use feedback to improve your work and keep contributing.' },
+              ].map((step) => (
+                <li key={step.title} className="rounded-xl border border-white bg-white/80 p-4">
+                  <p className="font-bold text-slate-900">{step.title}</p>
+                  <p className="mt-1 text-sm leading-6 text-slate-600">{step.text}</p>
+                </li>
+              ))}
+            </ol>
+          </div>
         </div>
       </section>
 
