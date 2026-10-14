@@ -2,7 +2,6 @@ import Link from 'next/link';
 import {
   ArrowUpRight,
   BookOpen,
-  CheckCircle2,
   Code2,
   ExternalLink,
   GraduationCap,
