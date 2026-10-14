@@ -3,44 +3,26 @@ import {
   ArrowUpRight,
   BookOpen,
   Code2,
-  ExternalLink,
-  GraduationCap,
-  HeartHandshake,
   MessageCircle,
   Mail,
   Sparkles,
-  Users,
 } from 'lucide-react';
 
 const programs = [
   {
     id: 'chai-with-wiki',
-    eyebrow: 'Community • Learning',
     title: 'Chai with Wiki',
     description:
       'An approachable space to discover Wikimedia, open knowledge, and open-source collaboration through conversations, practical guidance, and community-led learning.',
     icon: MessageCircle,
-    accent: 'from-cyan-500 to-sky-500',
-    points: [
-      'Beginner-friendly introduction to the Wikimedia ecosystem',
-      'Real conversations with contributors and mentors',
-      'Practical first steps for getting involved',
-    ],
     href: 'https://meta.wikimedia.org/wiki/Chai_with_Wiki',
   },
   {
     id: 'road-to-wiki',
-    eyebrow: 'Mentorship • Contribution',
     title: 'Road to Wiki',
     description:
       'A structured journey that helps students move from learning about Wikimedia technologies to making meaningful open-source contributions.',
     icon: Code2,
-    accent: 'from-blue-600 to-indigo-600',
-    points: [
-      'Hands-on exposure to open-source workflows',
-      'Guidance around MediaWiki, Gerrit and Phabricator',
-      'Mentorship focused on sustained contribution',
-    ],
     href: 'https://meta.wikimedia.org/wiki/Road_to_wiki_program_UU',
   },
 ];
@@ -53,10 +35,6 @@ const faqs = [
   {
     q: 'What can I learn through these programs?',
     a: 'You can explore Wikimedia technologies, open-source collaboration, contribution workflows, community practices and practical software-development skills.',
-  },
-  {
-    q: 'Are the programs only for experienced developers?',
-    a: 'No. Beginners are welcome. The focus is on learning, collaboration and gradually moving toward meaningful contribution.',
   },
 ];
 
@@ -128,14 +106,6 @@ export default function ProgramsPage() {
                 Explore programs
                 <ArrowUpRight className="h-4 w-4" />
               </a>
-              <Link
-                href="https://forms.gle/FGoyrEHC1CuP9hPSA"
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-2 rounded-xl border border-slate-300/80 bg-white/80 px-5 py-3 font-semibold text-slate-800 shadow-sm backdrop-blur transition hover:-translate-y-0.5 hover:border-emerald-300 hover:text-emerald-800"
-              >
-                Join WikiClub Tech
-              </Link>
               <a
                 href="mailto:wikitech@indicwiki.org"
                 className="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white/80 px-5 py-3 font-semibold text-slate-700 transition hover:border-sky-300 hover:text-emerald-800"
@@ -190,75 +160,10 @@ export default function ProgramsPage() {
                   <a href={program.href} target="_blank" rel="noopener noreferrer" className={`inline-flex items-center gap-2 rounded-xl px-4 py-2.5 text-sm font-bold text-white shadow-sm transition hover:-translate-y-0.5 ${isChai ? 'bg-[#477DA3] hover:bg-[#356789]' : 'bg-[#34765D] hover:bg-[#285F4A]'}`} aria-label={`View more details about ${program.title}`}>
                     View program details <ArrowUpRight className="h-4 w-4" />
                   </a>
-                  <a href={program.href} target="_blank" rel="noopener noreferrer" className={`inline-flex items-center gap-1.5 text-sm font-bold transition ${isChai ? 'text-[#315F82] hover:text-[#23445F]' : 'text-[#27664F] hover:text-[#174735]'}`} aria-label={`View ${program.title} on Meta-Wiki`}>
-                    Meta-Wiki <ExternalLink className="h-3.5 w-3.5" />
-                  </a>
                 </div>
               </article>
             );
           })}
-        </div>
-      </section>
-
-      <section className="relative z-10 isolate overflow-hidden border-y border-slate-200/80 bg-white/45 py-16 text-slate-900 backdrop-blur-sm">
-        <div aria-hidden="true" className="absolute -left-24 top-0 h-72 w-72 rounded-full bg-sky-200/40 blur-3xl" />
-        <div aria-hidden="true" className="absolute -right-24 bottom-0 h-72 w-72 rounded-full bg-emerald-200/40 blur-3xl" />
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-3xl text-center">
-            <p className="text-sm font-bold uppercase tracking-[0.18em] text-emerald-700">Choose your starting point</p>
-            <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">
-              Your journey. Your pace.
-            </h2>
-            <p className="mt-4 leading-7 text-slate-600">
-              New to Wikimedia, or ready to work on real technical contributions? Start where you are—there is no need to know everything before you begin.
-            </p>
-          </div>
-
-          <div className="mt-10 grid gap-5 lg:grid-cols-2">
-            <article className="rounded-3xl border border-sky-200 bg-gradient-to-br from-sky-50 to-white p-6 shadow-sm sm:p-8">
-              <div className="flex items-center gap-3">
-                <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-sky-100 text-sky-800">
-                  <MessageCircle className="h-5 w-5" />
-                </div>
-                <span className="text-xs font-bold uppercase tracking-[0.14em] text-sky-800">Discover</span>
-              </div>
-              <h3 className="mt-5 text-2xl font-bold text-slate-950">Start with Chai with Wiki</h3>
-              <p className="mt-3 leading-7 text-slate-600">
-                A welcoming first step if you want to understand Wikimedia, explore open knowledge and learn through conversations with the community.
-              </p>
-              <div className="mt-5 rounded-2xl border border-sky-100 bg-white/80 p-4">
-                <p className="text-sm font-semibold text-slate-800">A good fit if you are:</p>
-                <p className="mt-1 text-sm leading-6 text-slate-600">Curious about open source, new to Wikimedia, or looking for a friendly place to ask questions and explore.</p>
-              </div>
-              <a href="https://meta.wikimedia.org/wiki/Chai_with_Wiki" target="_blank" rel="noopener noreferrer" className="mt-6 inline-flex items-center gap-2 font-bold text-sky-800 transition hover:text-sky-950">
-                Explore Chai with Wiki <ArrowUpRight className="h-4 w-4" />
-              </a>
-            </article>
-
-            <article className="rounded-3xl border border-emerald-200 bg-gradient-to-br from-emerald-50 to-white p-6 shadow-sm sm:p-8">
-              <div className="flex items-center gap-3">
-                <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-emerald-100 text-emerald-800">
-                  <Code2 className="h-5 w-5" />
-                </div>
-                <span className="text-xs font-bold uppercase tracking-[0.14em] text-emerald-800">Build</span>
-              </div>
-              <h3 className="mt-5 text-2xl font-bold text-slate-950">Explore Road to Wiki</h3>
-              <p className="mt-3 leading-7 text-slate-600">
-                A more structured route if you want to learn technical contribution workflows and work toward meaningful open-source contributions.
-              </p>
-              <div className="mt-5 rounded-2xl border border-emerald-100 bg-white/80 p-4">
-                <p className="text-sm font-semibold text-slate-800">A good fit if you are:</p>
-                <p className="mt-1 text-sm leading-6 text-slate-600">Ready to practise, learn tools such as Git and Gerrit, and grow through a guided technical journey.</p>
-              </div>
-              <a href="https://meta.wikimedia.org/wiki/Road_to_wiki_program_UU" target="_blank" rel="noopener noreferrer" className="mt-6 inline-flex items-center gap-2 font-bold text-emerald-800 transition hover:text-emerald-950">
-                Explore Road to Wiki <ArrowUpRight className="h-4 w-4" />
-              </a>
-            </article>
-          </div>
-
-          <p className="mx-auto mt-6 max-w-3xl text-center text-sm leading-6 text-slate-500">
-            Not sure yet? That is completely fine. Read the official program pages to understand their current format and participation details before choosing.
-          </p>
         </div>
       </section>
 
