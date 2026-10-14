@@ -105,16 +105,21 @@ export default function ProgramsPage() {
         <div aria-hidden="true" className="absolute -right-24 top-16 h-72 w-72 rounded-full border border-sky-200/50" />
         <div aria-hidden="true" className="absolute -right-12 top-28 h-48 w-48 rounded-full border border-emerald-200/60" />
         <div className="relative mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
-          <div className="mb-10 flex items-center gap-4 border-b border-slate-200/70 pb-6 sm:mb-12 sm:gap-5 lg:justify-center">
+          <div className="mb-10 flex items-center justify-center gap-3 border-b border-slate-200/70 pb-6 sm:mb-12 sm:gap-6 lg:gap-8">
             <img
               src="/WikiClub-Tech-UU/logo.svg"
-              alt="WikiClub Tech globe logo"
-              className="h-14 w-14 shrink-0 object-contain sm:h-16 sm:w-16 lg:h-20 lg:w-20"
+              alt="WikiClub Tech logo"
+              className="h-12 w-12 shrink-0 object-contain sm:h-16 sm:w-16 lg:h-20 lg:w-20"
             />
-            <div className="min-w-0">
-              <p className="text-xl font-extrabold tracking-[0.12em] text-slate-950 sm:text-2xl lg:text-3xl">WIKICLUB TECH</p>
-              <p className="mt-1 text-sm font-semibold tracking-[0.3em] text-slate-600 sm:text-base lg:text-lg">UNITED UNIVERSITY</p>
+            <div className="min-w-0 text-center">
+              <p className="text-lg font-extrabold tracking-[0.1em] text-slate-950 sm:text-2xl lg:text-3xl">WIKICLUB TECH</p>
+              <p className="mt-1 text-xs font-semibold tracking-[0.2em] text-slate-600 sm:text-sm lg:text-base">UNITED UNIVERSITY</p>
             </div>
+            <img
+              src="/WikiClub-Tech-UU/uniteduniversity.png"
+              alt="United University logo"
+              className="h-12 w-12 shrink-0 object-contain sm:h-16 sm:w-16 lg:h-20 lg:w-20"
+            />
           </div>
           <div className="grid gap-8 lg:grid-cols-1 lg:items-center">
           <div className="max-w-4xl">
