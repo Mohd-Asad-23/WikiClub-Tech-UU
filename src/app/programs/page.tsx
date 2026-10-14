@@ -106,23 +106,23 @@ export default function ProgramsPage() {
         <div aria-hidden="true" className="absolute -right-12 top-28 h-48 w-48 rounded-full border border-emerald-200/60" />
         <div className="relative mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
           <div className="mb-10 border-b border-slate-200/70 pb-7 sm:mb-12 sm:pb-8">
-            <div className="mx-auto grid max-w-4xl grid-cols-[1fr_auto_1fr] items-center gap-3 sm:gap-6 lg:gap-8">
+            <div className="mx-auto grid max-w-4xl grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-2 sm:gap-6 lg:gap-8">
               <div className="flex items-center justify-center">
                 <img
                   src="/WikiClub-Tech-UU/logo.svg"
                   alt="WikiClub Tech logo"
-                  className="h-16 w-16 shrink-0 object-contain sm:h-20 sm:w-20 lg:h-24 lg:w-24"
+                  className="h-12 w-12 shrink-0 object-contain sm:h-20 sm:w-20 lg:h-24 lg:w-24"
                 />
               </div>
               <div className="min-w-0 text-center">
-                <p className="whitespace-nowrap text-base font-extrabold tracking-[0.08em] text-slate-950 sm:text-2xl lg:text-3xl">WIKICLUB TECH</p>
-                <p className="mt-1 whitespace-nowrap text-[0.65rem] font-bold tracking-[0.12em] text-slate-600 sm:text-sm sm:tracking-[0.18em] lg:text-base">UNITED UNIVERSITY</p>
+                <p className="whitespace-nowrap text-xs font-extrabold tracking-[0.04em] text-slate-950 sm:text-2xl sm:tracking-[0.08em] lg:text-3xl">WIKICLUB TECH</p>
+                <p className="mt-1 whitespace-nowrap text-[0.5rem] font-bold tracking-[0.04em] text-slate-600 sm:text-sm sm:tracking-[0.18em] lg:text-base">UNITED UNIVERSITY</p>
               </div>
               <div className="flex items-center justify-center">
                 <img
                   src="/WikiClub-Tech-UU/uniteduniversity.png"
                   alt="United University logo"
-                  className="h-16 w-16 shrink-0 scale-125 object-contain sm:h-20 sm:w-20 sm:scale-125 lg:h-24 lg:w-24 lg:scale-150"
+                  className="h-14 w-14 shrink-0 object-contain sm:h-24 sm:w-24 lg:h-28 lg:w-28"
                 />
               </div>
             </div>
@@ -196,25 +196,25 @@ export default function ProgramsPage() {
               <article
                 key={program.id}
                 id={program.id}
-                className={`group relative isolate overflow-hidden rounded-3xl border p-6 shadow-lg shadow-slate-900/[0.06] transition duration-300 hover:-translate-y-1 hover:shadow-xl sm:p-7 ${isChai ? 'border-orange-200/80 bg-gradient-to-br from-[#FFF3E7] via-[#FCE8D5] to-[#F8E2D2] text-[#713F25]' : 'border-emerald-200/80 bg-gradient-to-br from-[#EDF9F2] via-[#DDF2E7] to-[#D5EDE2] text-[#214F42]'}`}
+                className={`group relative isolate overflow-hidden rounded-3xl border p-6 shadow-lg shadow-slate-900/[0.06] transition duration-300 hover:-translate-y-1 hover:shadow-xl sm:p-7 ${isChai ? 'border-sky-200/70 bg-gradient-to-br from-[#DCEEFF]/40 via-[#EAF5FF]/30 to-[#DCEEFF]/40 text-[#23445F]' : 'border-emerald-200/70 bg-gradient-to-br from-[#DDF2E7]/40 via-[#EFF9F3]/30 to-[#DDF2E7]/40 text-[#214F42]'}`}
               >
-                <div aria-hidden="true" className={`absolute -right-10 -top-10 h-36 w-36 rounded-full border ${isChai ? 'border-orange-900/[0.08]' : 'border-emerald-900/[0.08]'}`} />
+                <div aria-hidden="true" className={`absolute -right-10 -top-10 h-36 w-36 rounded-full border ${isChai ? 'border-sky-900/[0.08]' : 'border-emerald-900/[0.08]'}`} />
                 <div aria-hidden="true" className={`absolute -right-4 -top-4 h-24 w-24 rounded-full border ${isChai ? 'border-orange-900/[0.08]' : 'border-emerald-900/[0.08]'}`} />
                 <div className="relative flex items-start justify-between gap-4">
-                  <div className={`flex h-11 w-11 items-center justify-center rounded-xl ring-1 ${isChai ? 'bg-orange-200/70 text-[#8C4A20] ring-orange-300/70' : 'bg-emerald-200/70 text-[#27664F] ring-emerald-300/70'}`}>
+                  <div className={`flex h-11 w-11 items-center justify-center rounded-xl ring-1 ${isChai ? 'bg-sky-200/40 text-[#315F82] ring-sky-300/50' : 'bg-emerald-200/40 text-[#27664F] ring-emerald-300/50'}`}>
                     <Icon className="h-5 w-5" />
                   </div>
-                  <span className={`rounded-full border px-3 py-1 text-xs font-bold tracking-wide ${isChai ? 'border-orange-300/80 bg-white/50 text-[#8C4A20]' : 'border-emerald-300/80 bg-white/50 text-[#27664F]'}`}>
+                  <span className={`rounded-full border px-3 py-1 text-xs font-bold tracking-wide ${isChai ? 'border-sky-300/70 bg-white/40 text-[#315F82]' : 'border-emerald-300/70 bg-white/40 text-[#27664F]'}`}>
                     {isChai ? 'CONNECT & DISCOVER' : 'BUILD & CONTRIBUTE'}
                   </span>
                 </div>
                 <h3 className="relative mt-5 text-2xl font-bold tracking-tight sm:text-3xl">{program.title}</h3>
-                <p className={`relative mt-3 max-w-xl text-sm leading-6 sm:text-base ${isChai ? 'text-[#754F3A]' : 'text-[#3D6657]'}`}>{program.description}</p>
-                <div className={`relative mt-6 flex flex-wrap items-center gap-4 border-t pt-4 ${isChai ? 'border-orange-300/70' : 'border-emerald-300/70'}`}>
-                  <a href={program.href} target="_blank" rel="noopener noreferrer" className={`inline-flex items-center gap-2 rounded-xl px-4 py-2.5 text-sm font-bold text-white shadow-sm transition hover:-translate-y-0.5 ${isChai ? 'bg-[#B96B35] hover:bg-[#9F5728]' : 'bg-[#34765D] hover:bg-[#285F4A]'}`} aria-label={`View more details about ${program.title}`}>
+                <p className={`relative mt-3 max-w-xl text-sm leading-6 sm:text-base ${isChai ? 'text-[#36566F]' : 'text-[#3D6657]'}`}>{program.description}</p>
+                <div className={`relative mt-6 flex flex-wrap items-center gap-4 border-t pt-4 ${isChai ? 'border-sky-300/60' : 'border-emerald-300/60'}`}>
+                  <a href={program.href} target="_blank" rel="noopener noreferrer" className={`inline-flex items-center gap-2 rounded-xl px-4 py-2.5 text-sm font-bold text-white shadow-sm transition hover:-translate-y-0.5 ${isChai ? 'bg-[#477DA3] hover:bg-[#356789]' : 'bg-[#34765D] hover:bg-[#285F4A]'}`} aria-label={`View more details about ${program.title}`}>
                     View program details <ArrowUpRight className="h-4 w-4" />
                   </a>
-                  <a href={program.href} target="_blank" rel="noopener noreferrer" className={`inline-flex items-center gap-1.5 text-sm font-bold transition ${isChai ? 'text-[#8C4A20] hover:text-[#5E3219]' : 'text-[#27664F] hover:text-[#174735]'}`} aria-label={`View ${program.title} on Meta-Wiki`}>
+                  <a href={program.href} target="_blank" rel="noopener noreferrer" className={`inline-flex items-center gap-1.5 text-sm font-bold transition ${isChai ? 'text-[#315F82] hover:text-[#23445F]' : 'text-[#27664F] hover:text-[#174735]'}`} aria-label={`View ${program.title} on Meta-Wiki`}>
                     Meta-Wiki <ExternalLink className="h-3.5 w-3.5" />
                   </a>
                 </div>
