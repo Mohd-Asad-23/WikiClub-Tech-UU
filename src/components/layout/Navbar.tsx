@@ -74,16 +74,21 @@ const Navbar = () => {
     <nav className='w-full fixed top-0 left-0 z-50 bg-white shadow-md'>
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         <div className='flex items-center justify-between h-16'>
-          <div className='min-w-0 flex-shrink-0'>
-            <Link href='/' aria-label='WikiClub Tech United University home' className='flex items-center'>
+          <div className='flex-shrink-0'>
+            <Link href='/' className='flex items-center space-x-2'>
               <Image
-                src='/WikiClub-Tech-UU/borderless_logo.svg'
-                alt='WikiClub Tech United University'
-                width={250}
-                height={76}
-                priority
-                className='h-auto w-[190px] object-contain sm:w-[230px] lg:w-[250px]'
+                src='/logo.svg'
+                alt='WikiClub Tech Logo'
+                width={48}
+                height={48}
+                className='h-12 w-auto'
               />
+              <div>
+                <h1 className='text-xl font-bold text-gray-700'>
+                  WikiClub Tech
+                </h1>
+                <p className='text-sm text-gray-500'>United University</p>
+              </div>
             </Link>
           </div>
           <div className='hidden md:block'>
