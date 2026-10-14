@@ -1,24 +1,17 @@
 import Link from 'next/link';
-import { contributors } from '@/data/contributors/contributors';
 import {
   ArrowUpRight,
   BookOpen,
-  CalendarDays,
   CheckCircle2,
   Code2,
   ExternalLink,
   GraduationCap,
   HeartHandshake,
-  Image as ImageIcon,
   MessageCircle,
   Mail,
   Sparkles,
-  Trophy,
   Users,
 } from 'lucide-react';
-
-const contributorCount = contributors.length;
-const mergedContributionCount = contributors.reduce((total, contributor) => total + contributor.merged, 0);
 
 const programs = [
   {
@@ -228,120 +221,6 @@ export default function ProgramsPage() {
               </article>
             );
           })}
-        </div>
-      </section>
-
-      <section id="program-resources" className="relative z-10 mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-        <div className="mb-10 max-w-3xl">
-          <p className="text-sm font-bold uppercase tracking-[0.18em] text-sky-700">
-            Your next step
-          </p>
-          <h2 className="mt-2 text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">
-            Keep learning beyond the program
-          </h2>
-          <p className="mt-3 leading-7 text-slate-600">
-            Find community updates, learn from contributors, meet the team and take your next step into open source.
-          </p>
-        </div>
-
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          <article className="rounded-2xl border border-sky-200/80 bg-sky-50/70 p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-md">
-            <CalendarDays className="h-7 w-7 text-sky-700" />
-            <h3 className="mt-4 text-lg font-bold text-slate-900">Events & community updates</h3>
-            <p className="mt-2 text-sm leading-6 text-slate-600">
-              Keep up with community stories and announcements. Check the latest posts and official program pages for current updates.
-            </p>
-            <div className="mt-5 flex flex-wrap gap-4">
-              <Link href="/blogs" className="inline-flex items-center gap-1.5 text-sm font-bold text-sky-800 hover:text-sky-950">
-                Read community posts <ArrowUpRight className="h-4 w-4" />
-              </Link>
-              <a href="https://meta.wikimedia.org/wiki/WikiClub_Tech_UU/en" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-sm font-bold text-sky-800 hover:text-sky-950">
-                Official Meta-Wiki <ExternalLink className="h-3.5 w-3.5" />
-              </a>
-            </div>
-          </article>
-
-          <article className="rounded-2xl border border-emerald-200/80 bg-emerald-50/70 p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-md">
-            <Trophy className="h-7 w-7 text-emerald-700" />
-            <h3 className="mt-4 text-lg font-bold text-slate-900">Contributor showcase</h3>
-            <p className="mt-2 text-sm leading-6 text-slate-600">
-              Explore the existing contribution leaderboard and celebrate the people helping the community grow.
-            </p>
-            <Link href="/contributors" className="mt-5 inline-flex items-center gap-1.5 text-sm font-bold text-emerald-800 hover:text-emerald-950">
-              Meet contributors <ArrowUpRight className="h-4 w-4" />
-            </Link>
-          </article>
-
-          <article className="rounded-2xl border border-sky-200/80 bg-sky-50/70 p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-md">
-            <Users className="h-7 w-7 text-sky-700" />
-            <h3 className="mt-4 text-lg font-bold text-slate-900">Mentors & team</h3>
-            <p className="mt-2 text-sm leading-6 text-slate-600">
-              Find the people behind WikiClub Tech UU and explore the existing team directory to learn about community roles.
-            </p>
-            <Link href="/teams" className="mt-5 inline-flex items-center gap-1.5 text-sm font-bold text-sky-800 hover:text-sky-950">
-              Explore the team <ArrowUpRight className="h-4 w-4" />
-            </Link>
-          </article>
-        </div>
-
-        <div className="mt-6 rounded-3xl border border-emerald-200/80 bg-gradient-to-r from-emerald-50/90 via-white/90 to-sky-50/90 p-6 sm:p-8">
-          <div className="grid gap-6 md:grid-cols-[0.8fr_1.2fr] md:items-center">
-            <div>
-              <p className="text-sm font-bold uppercase tracking-[0.16em] text-emerald-800">First contribution guide</p>
-              <h3 className="mt-2 text-2xl font-bold tracking-tight text-slate-950">A simple path to get started</h3>
-              <p className="mt-3 text-sm leading-6 text-slate-600">
-                You do not need to know everything on day one. Start small, ask questions and build confidence step by step.
-              </p>
-            </div>
-            <ol className="grid gap-3 sm:grid-cols-2">
-              {[
-                { title: '01 · Explore', text: 'Choose a Wikimedia or open-source project that interests you.' },
-                { title: '02 · Set up', text: 'Get familiar with Git, GitHub and the project contribution guide.' },
-                { title: '03 · Ask & contribute', text: 'Connect with the community and start with a beginner-friendly task.' },
-                { title: '04 · Learn & improve', text: 'Use feedback to improve your work and keep contributing.' },
-              ].map((step) => (
-                <li key={step.title} className="rounded-xl border border-white bg-white/80 p-4">
-                  <p className="font-bold text-slate-900">{step.title}</p>
-                  <p className="mt-1 text-sm leading-6 text-slate-600">{step.text}</p>
-                </li>
-              ))}
-            </ol>
-          </div>
-        </div>
-      </section>
-
-      <section id="community-impact" className="relative z-10 mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
-        <div className="overflow-hidden rounded-3xl border border-slate-200/80 bg-white/75 p-6 shadow-sm backdrop-blur-sm sm:p-8">
-          <div className="grid gap-8 md:grid-cols-[1fr_auto] md:items-center">
-            <div className="max-w-2xl">
-              <p className="text-sm font-bold uppercase tracking-[0.18em] text-emerald-700">Community impact</p>
-              <h2 className="mt-2 text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">Small contributions. Shared progress.</h2>
-              <p className="mt-3 leading-7 text-slate-600">
-                Explore the current contributor leaderboard and discover the people and activities behind our open-source community. These figures reflect the contributor data currently listed on this website.
-              </p>
-            </div>
-            <div className="grid grid-cols-2 gap-3 md:min-w-[300px]">
-              <div className="rounded-2xl border border-sky-200 bg-sky-50/80 p-5">
-                <p className="text-3xl font-extrabold text-sky-800">{contributorCount}</p>
-                <p className="mt-1 text-sm font-medium text-slate-600">Listed contributors</p>
-              </div>
-              <div className="rounded-2xl border border-emerald-200 bg-emerald-50/80 p-5">
-                <p className="text-3xl font-extrabold text-emerald-800">{mergedContributionCount}</p>
-                <p className="mt-1 text-sm font-medium text-slate-600">Merged contributions listed</p>
-              </div>
-            </div>
-          </div>
-          <div className="mt-6 flex flex-wrap gap-3 border-t border-slate-200 pt-5">
-            <Link href="/contributors" className="inline-flex items-center gap-2 rounded-xl bg-emerald-700 px-4 py-2.5 text-sm font-bold text-white transition hover:bg-emerald-800">
-              Explore leaderboard <ArrowUpRight className="h-4 w-4" />
-            </Link>
-            <Link href="/#gallery" className="inline-flex items-center gap-2 rounded-xl border border-slate-300 bg-white px-4 py-2.5 text-sm font-bold text-slate-700 transition hover:border-sky-300 hover:text-sky-800">
-              <ImageIcon className="h-4 w-4" /> Community gallery
-            </Link>
-            <Link href="/teams" className="inline-flex items-center gap-2 rounded-xl border border-slate-300 bg-white px-4 py-2.5 text-sm font-bold text-slate-700 transition hover:border-emerald-300 hover:text-emerald-800">
-              Meet the team <Users className="h-4 w-4" />
-            </Link>
-          </div>
         </div>
       </section>
 
