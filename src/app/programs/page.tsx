@@ -105,15 +105,15 @@ export default function ProgramsPage() {
         <div aria-hidden="true" className="absolute -right-24 top-16 h-72 w-72 rounded-full border border-sky-200/50" />
         <div aria-hidden="true" className="absolute -right-12 top-28 h-48 w-48 rounded-full border border-emerald-200/60" />
         <div className="relative mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
-          <div className="mb-10 flex items-center gap-4 border-b border-slate-200/70 pb-6 sm:mb-12 sm:gap-5">
+          <div className="mb-10 flex items-center gap-4 border-b border-slate-200/70 pb-6 sm:mb-12 sm:gap-5 lg:justify-center">
             <img
               src="/WikiClub-Tech-UU/logo.svg"
               alt="WikiClub Tech globe logo"
-              className="h-14 w-14 shrink-0 object-contain sm:h-16 sm:w-16"
+              className="h-14 w-14 shrink-0 object-contain sm:h-16 sm:w-16 lg:h-20 lg:w-20"
             />
             <div className="min-w-0">
-              <p className="text-lg font-extrabold tracking-[0.12em] text-slate-950 sm:text-2xl">WIKICLUB TECH</p>
-              <p className="mt-0.5 text-xs font-medium tracking-[0.3em] text-slate-600 sm:text-sm">UNITED UNIVERSITY</p>
+              <p className="text-xl font-extrabold tracking-[0.12em] text-slate-950 sm:text-2xl lg:text-3xl">WIKICLUB TECH</p>
+              <p className="mt-1 text-sm font-semibold tracking-[0.3em] text-slate-600 sm:text-base lg:text-lg">UNITED UNIVERSITY</p>
             </div>
           </div>
           <div className="grid gap-8 lg:grid-cols-1 lg:items-center">
@@ -124,7 +124,7 @@ export default function ProgramsPage() {
             </span>
             <h1 className="mt-6 text-4xl font-extrabold tracking-tight text-slate-950 sm:text-5xl lg:text-6xl">
               Learn. Contribute.{' '}
-              <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-emerald-700 via-teal-600 to-amber-600 bg-clip-text text-transparent">
                 Grow together.
               </span>
             </h1>
@@ -151,7 +151,7 @@ export default function ProgramsPage() {
               </Link>
               <a
                 href="mailto:wikitech@indicwiki.org"
-                className="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white/80 px-5 py-3 font-semibold text-slate-700 transition hover:border-sky-300 hover:text-sky-700"
+                className="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white/80 px-5 py-3 font-semibold text-slate-700 transition hover:border-sky-300 hover:text-emerald-800"
               >
                 <Mail className="h-4 w-4" />
                 Email us
@@ -185,7 +185,7 @@ export default function ProgramsPage() {
               <article
                 key={program.id}
                 id={program.id}
-                className={`group relative isolate overflow-hidden rounded-3xl border border-white/80 bg-gradient-to-br ${isChai ? 'from-cyan-500 to-sky-600' : 'from-blue-700 to-indigo-700'} p-6 text-white shadow-xl shadow-slate-900/10 transition duration-300 hover:-translate-y-1 hover:shadow-2xl sm:p-7`}
+                className={`group relative isolate overflow-hidden rounded-3xl border border-white/80 bg-gradient-to-br ${isChai ? 'from-amber-500 to-orange-600' : 'from-emerald-700 to-teal-800'} p-6 text-white shadow-xl shadow-slate-900/10 transition duration-300 hover:-translate-y-1 hover:shadow-2xl sm:p-7`}
               >
                 <div aria-hidden="true" className="absolute -right-10 -top-10 h-36 w-36 rounded-full border border-white/15" />
                 <div aria-hidden="true" className="absolute -right-4 -top-4 h-24 w-24 rounded-full border border-white/15" />
@@ -233,7 +233,7 @@ export default function ProgramsPage() {
                 const Icon = benefit.icon;
                 return (
                   <div key={benefit.title} className="rounded-2xl border border-emerald-100 bg-white/75 p-5 shadow-sm backdrop-blur-sm">
-                    <Icon className="h-6 w-6 text-cyan-300" />
+                    <Icon className="h-6 w-6 text-emerald-700" />
                     <h3 className="mt-4 font-semibold">{benefit.title}</h3>
                     <p className="mt-2 text-sm leading-6 text-slate-600">{benefit.text}</p>
                   </div>
@@ -246,7 +246,7 @@ export default function ProgramsPage() {
 
       <section className="relative z-10 mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="text-center">
-          <p className="text-sm font-bold uppercase tracking-[0.18em] text-sky-600">FAQ</p>
+          <p className="text-sm font-bold uppercase tracking-[0.18em] text-emerald-700">FAQ</p>
           <h2 className="mt-2 text-3xl font-bold text-slate-950">Questions, answered</h2>
         </div>
         <div className="mt-10 divide-y divide-slate-200/80 rounded-2xl border border-white/90 bg-white/75 px-6 shadow-xl shadow-slate-900/5 backdrop-blur-md">
