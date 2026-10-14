@@ -104,7 +104,18 @@ export default function ProgramsPage() {
         <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-br from-sky-100/20 via-transparent to-emerald-100/20" />
         <div aria-hidden="true" className="absolute -right-24 top-16 h-72 w-72 rounded-full border border-sky-200/50" />
         <div aria-hidden="true" className="absolute -right-12 top-28 h-48 w-48 rounded-full border border-emerald-200/60" />
-        <div className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
+        <div className="relative mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8 lg:py-20">
+          <div className="mb-10 flex items-center gap-4 border-b border-slate-200/70 pb-6 sm:mb-12 sm:gap-5">
+            <img
+              src="/WikiClub-Tech-UU/logo.svg"
+              alt="WikiClub Tech globe logo"
+              className="h-14 w-14 shrink-0 object-contain sm:h-16 sm:w-16"
+            />
+            <div className="min-w-0">
+              <p className="text-lg font-extrabold tracking-[0.12em] text-slate-950 sm:text-2xl">WIKICLUB TECH</p>
+              <p className="mt-0.5 text-xs font-medium tracking-[0.3em] text-slate-600 sm:text-sm">UNITED UNIVERSITY</p>
+            </div>
+          </div>
           <div className="grid gap-8 lg:grid-cols-1 lg:items-center">
           <div className="max-w-4xl">
             <span className="inline-flex items-center gap-2 rounded-full border border-sky-200 bg-sky-50 px-4 py-2 text-sm font-semibold text-sky-700">
